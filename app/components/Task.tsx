@@ -6,6 +6,7 @@ import { FiEdit, FiTrash2 } from "react-icons/fi";
 import Modal from "./Modal";
 import { useRouter } from "next/navigation";
 import { deleteTodo, editTodo } from "@/api";
+import { Pencil, Trash, Trash2 } from "lucide-react";
 
 interface TaskProps {
   task: ITask;
@@ -37,11 +38,11 @@ const Task: React.FC<TaskProps> = ({ task }) => {
     <tr key={task.id}>
       <td className='w-full'>{task.text}</td>
       <td className='flex gap-5'>
-        <FiEdit
+        <Pencil
           onClick={() => setOpenModalEdit(true)}
           cursor='pointer'
           className='text-blue-500'
-          size={25}
+          size={24}
         />
         <Modal modalOpen={openModalEdit} setModalOpen={setOpenModalEdit}>
           <form onSubmit={handleSubmitEditTodo}>
@@ -60,11 +61,11 @@ const Task: React.FC<TaskProps> = ({ task }) => {
             </div>
           </form>
         </Modal>
-        <FiTrash2
+        <Trash2
           onClick={() => setOpenModalDeleted(true)}
           cursor='pointer'
           className='text-red-500'
-          size={25}
+          size={24}
         />
         <Modal modalOpen={openModalDeleted} setModalOpen={setOpenModalDeleted}>
           <h3 className='text-lg text-black'>
