@@ -37,3 +37,6 @@ export const deleteTodo = async (id: string): Promise<void> => {
     method: 'DELETE',
   })
 }
+
+
+//all api endpoints
