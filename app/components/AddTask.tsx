@@ -34,16 +34,16 @@ const AddTask = () => {
 
       <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}>
         <form onSubmit={handleSubmitNewTodo}>
-          <h3 className='font-bold text-lg'>Add new task</h3>
+          <h3 className='font-bold text-2xl text-black uppercase'>Add new task</h3>
           <div className='modal-action'>
             <input
               value={newTaskValue}
               onChange={(e) => setNewTaskValue(e.target.value)}
               type='text'
-              placeholder='Type here'
-              className='input input-bordered w-full'
+              placeholder='todo name'
+              className='input bg-white input-bordered w-full'
             />
-            <button type='submit' className='btn'>
+            <button type='submit' className='btn  bg-green-600 text-white border-none hover:bg-green-700 '>
               Submit
             </button>
           </div>
